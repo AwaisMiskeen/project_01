@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        * {
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+	margin: 0;
+}
+
+body {
+	background-image: url(https://png.pngtree.com/background/20230519/original/pngtree-an-old-stone-wall-with-wooden-floor-and-lights-on-picture-image_2654864.jpg); background-repeat: no-repeat;  background-size: cover;
+	font-family: 'Open Sans',sans-serif;}
+
+.layout {margin: 0 auto;	max-width: 1170px;	width: 100%;padding: 0 15px;}
+/********Grid Widht *******/
+
+.form-group{ float:left;    padding-left: 15px;    padding-right: 15px;       width: 50%;}
+.grid-8{width: 66.6667%;}
+.grid-12{width: 100%;padding-left: 15px;	padding-right: 15px;	position: relative;    overflow: hidden;}	
+
+
+/***Section Css******/
+
+/* section {      } */
+
+.text-center{text-align:center;}
+.section-title {    color: #303030;    font-size: 35px;    font-weight: bold;    text-transform: uppercase;}
+.contact p {    color: #303030;    letter-spacing: 1.5px;    }
+.form{ margin:0 auto;}
+.form form {    margin-top: 50px;}
+input {    width: 100%;}
+.form-control {    width: 100%;}
+.form-control {    background-color: #ffffff8f;    border: 1px solid #ccc;    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #292828;    display: block;    font-size: 14px;     line-height: 1.42857;    padding: 6px 12px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;    width: 100%;
+	  text-transform: capitalize;}
+
+.costom-btn {       border: 1px solid #303030;    color: #ffffff;
+    font: bold 16px/18px "Open Sans",sans-serif;    letter-spacing: 1.5px;    text-transform: uppercase;
+     width: 100%;	   padding: 6px 12px;	   cursor: pointer;}
+.form-group {    margin-top: 23px;}
+.icon-text {    color: #303030;    font: 16px/22px "Open Sans",sans-serif;    text-align: center;
+    text-transform: uppercase;	 margin: 25px 0;}
+.icon-holder {    margin: 0 auto;    width: 265px;}
+.icon-holder ul li a {    color: #ffffff;    height: 38px;    width: 38px;}
+.icon-holder ul li {    display: inline;    padding: 12px;}
+@media (max-width:980px) {
+	.layout {				width: 80%px;	}
+	.grid-6 {				width: 50%;	}
+}
+@media (max-width:640px) {
+	.layout {		width: 80%;	}
+	.form-group, .grid-8 {		width: 100%;	}
+
+
+	}
+    </style>
+
+    <title>contact_us</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light top-0">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="./image/NPCEDv.png" alt=""
+                    style="height: 100px;width: 100%;"></a>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <l      i class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html" style="color: white;">Home</a>
+                    </l>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about_us.html" style="color: white;">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="./contact_us.html" tabindex="-1" aria-disabled="true" style="color: white;">Contact US</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link " href="./shop.html" tabindex="-1" aria-disabled="true" style="color: white;">Shop</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn " type="submit " style="background-color: #ffffff1f;">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <section class="contact" style="margin-top: 150px;">
+    
+      
+        <div class="layout">	 
+            <div class="text-center">
+             
+              <p style="color: white;font-weight: 550; filter: opacity(90%);background-color: rgb(15, 15, 14);">We're here to assist you! If you have any questions or need assistance, please feel free to reach out to us.
+
+                You can also email us. 
+            <div class="grid-8 form">
+              <form id="contact_form" name="contactForm">
+                <div class="form-inline clearfix">
+                  <div class="form-group grid-6 ">
+                    <input type="text" placeholder="name" id="exampleInputName" name="name" class="form-control" required>
+                  </div>
+                  <div class="form-group grid-6">
+                  <input  type="email" placeholder="email address" id="exampleInputEmail" name="email" class="form-control" required>
+                  </div> 
+                  <div class="form-group grid-6">
+                    <input type="textr" placeholder="phone number" id="exampleInputSubject" name="phone number" class="form-control" required>
+                  </div>
+                  <div class="form-group grid-6">
+                    <input type="text" placeholder="company" id="exampleInputCompany" name="company" class="form-control" required>
+                  </div>
+                  <div class="form-group grid-12">
+                    <textarea placeholder="message" id="exampleInputMessage" rows="3" name="message" class="form-control"></textarea>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div style="display:none;" class="success" id="mail_success">Your message has been sent successfully.
+                  </div><!-- success message -->
+                  <div style="display:none;" class="error" id="mail_fail"> Sorry, error occured this time sending your message.
+                  </div><!-- error message -->
+                </div>
+                <div id="submit" class="form-group grid-12">
+                  <input  type="submit" value="send" class="btn  btn-lg costom-btn" id="send_message" style="border-color: #7E6363;">
+                </div>
+              </form>
+            </div> <!-- /.col-xs-12 .col-sm-offset-2 .col-sm-8 -->
+            <div class="grid-12">       
+              <!-- <div class="icon-text">
+                <span>find us on</span>
+              </div> -->
+              <!-- /.icon-text -->
+              <!-- <div class="icon-holder">
+                <ul>
+                  <li><a target="_blank" href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a target="_blank" href="#"><i class="fa fa-google-plus"></i></a></li>
+                  <li><a target="_blank" href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a target="_blank" href="#"><i class="fa fa-behance"></i></a></li>
+                  <li><a target="_blank" href="#"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+              </div>/.icon-holder -->
+            </div><!-- /.col-xs-12 -->     
+        </div>	
+        
+    </section>	
+
+  <div style="margin-top: 50px;">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14474.537866531682!2d67.0280672!3d24.9104471!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33fb94eb666b5%3A0x6e383e3adce474a4!2sAptech%20Computer%20Education%20Site%20Center!5e0!3m2!1sen!2s!4v1710146498916!5m2!1sen!2s" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+    <div class="container-fluid p-0" >
+
+      <footer class="text-white text-center text-lg-start">
+        <!-- Grid container -->
+        <div class="container-fluid p-4">
+          <!--Grid row-->
+          <div class="row mt-4">
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+              <h5 class="text-uppercase mb-4">About company</h5>
+    
+              <p>
+                Welcome to Mani-Dry-Fruits store - your one-stop destination for high-quality products!
+              </p>
+    
+              <p>
+                Welcome to Mani-Dry-Fruits, where health meets indulgence! We are your go-to destination for premium quality dry fruits that not only tantalize your taste buds but also contribute to your overall well-being. Our passion for providing the finest dry fruits drives us to source the best, ensuring that every bite is a delightful and nutritious experience.
+              </p>
+    
+              <div class="">
+                <!-- Facebook -->
+                <a type="button" class="btn btn-floating btn-warning btn-lg" ><i class="fab fa-facebook-f"></i></a>
+                <!-- Dribbble -->
+                <a type="button" class="btn btn-floating btn-warning btn-lg"><i class="fab fa-dribbble"></i></a>
+                <!-- Twitter -->
+                <a type="button" class="btn btn-floating btn-warning btn-lg"><i class="fab fa-twitter"></i></a>
+                <!-- Google + -->
+                <a type="button" class="btn btn-floating btn-warning btn-lg"><i class="fab fa-google-plus-g"></i></a>
+                <!-- Linkedin -->
+              </div>
+            </div>
+            <!--Grid column-->
+    
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+           
+              <ul class="fa-ul" style="margin-left: 1.65em;">
+                <li class="mb-3">
+                  <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Plot 1E, 3, Habib Garden, 1 Underpass، near Nazimabad, Block 1 Nazimabad, Karachi, Karachi City, Sindh 74400</span>
+                </li>
+                <li class="mb-3">
+                  <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">awaismiskeen009@gmail.com</span>
+                </li>
+                <li class="mb-3">
+                  <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">+923148848399</span>
+                </li>
+                <li class="mb-3">
+                  <span class="fa-li"><i class="fas fa-print"></i></span><span class="ms-2">+923148848399</span>
+                </li>
+              </ul>
+            </div>
+            <!--Grid column-->
+    
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase mb-4">Opening hours</h5>
+    
+              <table class="table text-center text-white">
+                <tbody class="font-weight-normal">
+                  <tr>
+                    <td>Mon - Thu:</td>
+                    <td>8am - 9pm</td>
+                  </tr>
+                  <tr>
+                    <td>Fri - Sat:</td>
+                    <td>8am - 1am</td>
+                  </tr>
+                  <tr>
+                    <td>Sunday:</td>
+                    <td>9am - 10pm</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </div>
+        <!-- Grid container -->
+    
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2024 Copyright:
+          <a class="text-white" href="http://127.0.0.1:5500/index.html">MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+      
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+</script>
+</body>
+</html>

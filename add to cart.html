@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card">
+        <div class="sale-badge" id="saleBadge1">Sale!</div>
+        <div class="img"><img src="./image/almond.jpg" alt=""></div>
+        <div class="title">Watermelon</div>
+        <div class="price"><span class="strike">$5</span>$2.50</div>
+        <div class="btn-container">
+           <button class="btn" id="addToCartBtn1" onclick="addToCart('Watermelon', 2.50)">Add to cart</button>
+        </div>                
+ </div>
+ <script>
+    function addToCart(productName, productPrice) {
+    console.log(productName + ', ' + productPrice);
+    // Get the table body where cart items will be added
+    var cartTableBody = document.querySelector('.shopping-cart');
+    console.log(cartTableBody)
+
+    // Create a new row for the cart item
+    var newRow = cartTableBody.insertRow();
+    console.log(newRow)
+    
+    // Create cells for product name and price
+    var productNameCell = newRow.insertCell(0);
+    var productPriceCell = newRow.insertCell(1);
+    
+    // Set the content of the cells
+    productNameCell.textContent = productName;
+    productPriceCell.textContent = '$' + productPrice.toFixed(2);
+}
+ </script>
+  <table class="shopping-cart">
+    <tbody>
+        <tr>
+            <th style="width: 40px;"></th>
+            <th style="width: 90px;"></th>
+            <th style="width: 500px;">Product</th>
+            <th style="width: 90px;">Price</th>
+            <th style="width: 160px;">Quantity</th>
+            <th style="width: 90px;">Subtotal</th>
+        </tr>
+        <tr>
+            <td class="cross-symbol">
+                <div class="circle"  onclick="deleteRow(this)">&times;</div>
+            </td>
+            <td class="image-cell">
+                <img src="./image/almond.jpg">
+            </td>
+            <td>Watermelon</td>
+            <td>$2.50</td>
+            <td>
+                <div class="quantity">
+                    <button class="minus">-</button><input type="text" class="number" value="1" min="1"><button class="plus">+</button>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</body>
+</html>

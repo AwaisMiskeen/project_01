@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>shop</title>
+
+    <style>
+        .quantity {
+    display: flex;
+    /* align-items: center;
+    justify-content:right; */
+
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+
+  }
+  .quantity input {
+    width: 50px;
+    text-align: center;
+   
+  }
+  .btn_1{
+    outline: 1px solid rgb(134, 134, 134);
+
+    border: none;
+  }
+  .but {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+
+
+  }
+  .btn{
+    padding-left: 35px;
+    padding-right:35px;
+
+  }
+  
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light top-0 ">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="./image/NPCEDv.png" alt=""
+                    style="height: 100px;width: 100%;"></a>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <l      i class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html" style="color: white;">Home</a>
+                    </l>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about_us.html" style="color: white;">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="./contact_us.html" tabindex="-1" aria-disabled="true" style="color: white;">Contact US</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link " href="./shop.html" tabindex="-1" aria-disabled="true" style="color: white;">Shop</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="" id="find" onkeyup="search()">
+                    <button class="btn "  type="submit" style="background-color: #ffffff1f;">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div style="text-align: center; margin-top: 150px;">
+            <h3 class="dry-fruits-heading">
+   SHOP
+    
+            </h3>
+        
+        </div>
+        <div class="row" style="margin-top: 50px;">
+            
+            
+          <div class="col-md-3">
+              <div class="col">
+                  <div class="card h-100">
+                        
+                    
+                    <img class="shop-image-card" src="./image/walnutt.jpg" alt="">
+                      <div class="card-body">
+                          <h6> Walnut(Akhrot)</h6>
+                          <h6 class="card-title"><s><span>Rs. 1500</span></s></h6><h5 class="d-flex justify-content-center">Rs.1100</h5>
+                          
+                          <p>
+                              Walnuts provide omega-3s, antioxidants,  benefiting heart and brain health.</p>
+
+                              <div class="quantity">
+                                <button class="btn_1" onclick="decreaseQuantity(event)">-</button>
+                                <input type="text" value="1" min="1">
+                                <button class="btn_1" onclick="increaseQuantity(event)">+</button>
+                            </div>
+                            <div class="but" >
+                         
+                              <button class="btn" onclick="addToCart()">Add to Cart</button>
+                             </div>
+                              
+                      </div>
+                    </div>    
+                </div>
+          </div>
+          
+          
+          
+      <div class="col-md-3">
+              <div class="col">
+                  <div class="card h-100">
+                        
+                    
+                    <img class="shop-image-card" src="./image/raisins.jpg" alt="" >
+                      <div class="card-body">
+                          <h6>Raisins(kishmish)</h6>
+                          <h6 class="card-title"><s><span>Rs.6000</span></s></h6><h5 class="d-flex justify-content-center">Rs.5600</h5>
+                          <p>
+                              Raisins are rich in antioxidants, fiber, and vitamins, supporting digestion and overall health.</p>
+
+                              <div class="quantity">
+                                <button class="btn_1" onclick="decreaseQuantity(event)">-</button>
+                                <input type="text" value="1" min="1">
+                                <button class="btn_1" onclick="increaseQuantity(event)">+</button>
+                            </div>
+                         
+                            <div class="but" >
+                         
+                              <button class="btn" onclick="addToCart()">Add to Cart</button>
+                             </div>
+                              
+                      </div>
+                    </div>    
+                </div>
+          </div><div class="col-md-3">
+              <div class="col">
+                  <div class="card h-100">
+                        
+                    
+                    <img class="shop-image-card" src="./image/pine_nuts.jpg" alt="" >
+                      <div class="card-body">
+                          <h6> Pine nuts(chilgoza)</h6>
+                          <h6 class="card-title"><s><span >Rs.13500</span></s></h6><h5 class="d-flex justify-content-center">Rs.13000 </h5>
+                          <p>
+                              Pine nuts are rich in healthy fats and nutrients, supporting heart health and vitality. </p>
+
+                              <div class="quantity">
+                                <button class="btn_1" onclick="decreaseQuantity(event)">-</button>
+                                <input type="text" value="1" min="1">
+                                <button class="btn_1" onclick="increaseQuantity(event)">+</button>
+                            </div>
+                         
+                            <div class="but" >
+                         
+                              <button class="btn" onclick="addToCart()">Add to Cart</button>
+                             </div>
+                              
+                      </div>
+                    </div>    
+                </div>
+          </div><div class="col-md-3">
+              <div class="col">
+                  <div class="card h-100">
+                        
+                    
+                    <img class="shop-image-card" src="https://www.hkvitals.com/blog/wp-content/uploads/2023/09/900-10.jpg" alt="" >
+                      <div class="card-body">
+                          <h6>Pistachio(pista)</h6>
+                          
+                          <h6 class="card-title"><s><span >Rs.3400</span></s></h6><h5 class="d-flex justify-content-center">Rs.3200</h5>
+                          <p>
+                              Pistachios offer fiber, protein, healthy fats, and antioxidants, promoting heart health.</p>
+
+                              <div class="quantity">
+                                <button class="btn_1" onclick="decreaseQuantity(event)">-</button>
+                                <input type="text" value="1" min="1">
+                                <button class="btn_1" onclick="increaseQuantity(event)">+</button>
+                            </div>
+                         
+                            <div class="but" >
+                         
+                              <button class="btn" onclick="addToCart()">Add to Cart</button>
+                             </div>
+                              
+
+
+                      </div>
+                    </div>    
+                </div>
+          </div></div>
+        
+    </div>
+    <div class="container">
+      <div class="row" style="margin-top: 50px;">
+            
+            
+        <div class="col-md-3">
+            <div class="col">
+                <div class="card h-100">
+                      
+                  
+                  <img class="shop-image-card" src="./image/coconut.jpg" alt=""  >
+                    <div class="card-body">
+                        <h6>Coconut(Khopra)</h6>
+                        <h6 class="card-title"><s><span >Rs.650</span></s></h6><h5 class="d-flex justify-content-center">Rs.500</h5>
+                        <p>
+                            Dry coconut provides healthy fats, fiber and vitamins supporting overall health.</p>
+                            <div class="quantity">
+                              <button class="btn_1" onclick="decreaseQuantity(event)">-</button>
+                              <input type="text" value="1" min="1">
+                              <button class="btn_1" onclick="increaseQuantity(event)">+</button>
+                          </div>
+                       
+                          <div class="but" >
+                         
+                            <button class="btn" onclick="addToCart()">Add to Cart</button>
+                           </div>
+                            
+                    </div>
+                  </div>    
+              </div>
+        </div>
+        
+        
+        
+    <div class="col-md-3">
+            <div class="col">
+                <div class="card h-100">
+                      
+                  
+                  <img class="shop-image-card" src="https://images.immediate.co.uk/production/volatile/sites/30/2021/02/almonds-9e25ce7.jpg?quality=90&resize=556,505" alt="" >
+                    <div class="card-body">
+                        <h6>Almond(badam)</h6>
+                        <h6 class="card-title"><s><span >Rs.2700</span></s></h6><h5 class="d-flex justify-content-center">Rs.2500</h5>
+                        <p>
+                            Almonds are nutrient-rich, providing protein, fiber, healthy fats and vitamins for health.</p>
+                            <div class="quantity">
+                              <button class="btn_1" onclick="decreaseQuantity(event)">-</button>
+                              <input type="text" value="1" min="1">
+                              <button class="btn_1" onclick="increaseQuantity(event)">+</button>
+                          </div>
+                       
+                          <div class="but" >
+                         
+                            <button class="btn" onclick="addToCart()">Add to Cart</button>
+                           </div>
+                            
+                    </div>
+                  </div>    
+              </div>
+        </div><div class="col-md-3">
+            <div class="col">
+                <div class="card h-100">
+                      
+                  
+                  <img class="shop-image-card" src="./image/anjer.jpg" alt="" >
+                    <div class="card-body">
+                        <h6> Dry Fig(Anjeer)</h6>
+                        <h6 class="card-title"><s>Rs.1700 </span></s></h6><h5 class="d-flex justify-content-center">Rs.1500</h5>
+                        <p>
+                            Dry figs are rich  supporting digestive in fiber and minerals, supporting digestive and bone health.</p>
+                            <div class="quantity">
+                              <button class="btn_1" onclick="decreaseQuantity(event)">-</button>
+                              <input type="text" value="1" min="1">
+                              <button class="btn_1" onclick="increaseQuantity(event)">+</button>
+                          </div>
+                       
+                          <div class="but" >
+                         
+                            <button class="btn" onclick="addToCart()">Add to Cart</button>
+                           </div>
+                            
+                    </div>
+                  </div>    
+              </div>
+        </div><div class="col-md-3">
+            <div class="col">
+                <div class="card h-100">
+                      
+                  
+                  <img class="shop-image-card" src="./image/apricot.jpg" alt="">
+                    <div class="card-body">
+                        <h6> Dry Apricot(Khubani)</h6>
+                        <h6 class="card-title"><s><span >Rs.1450</span></s></h6><h5 class="d-flex justify-content-center">Rs.1250</h5>
+                        <p>
+                           
+                          Dried apricots: fiber, antioxidants, vitamins; support digestion and immunity.</p>
+                          <div class="quantity">
+                            <button class="btn_1" onclick="decreaseQuantity(event)">-</button>
+                            <input type="text" value="1" min="1">
+                            <button class="btn_1" onclick="increaseQuantity(event)">+</button>
+                        </div>
+                     
+                        <div class="but" >
+                         
+                          <button class="btn" onclick="addToCart()">Add to Cart</button>
+                         </div>
+                          
+                    </div>
+                  </div>    
+              </div>
+        </div></div>
+    </div>
+    <div class="container">
+        <div style="text-align: center; margin-top: 50px;">
+          
+        
+        </div>
+        <div class="row" style="margin-top: 50px;">
+            
+            
+          <div class="col-md-3">
+              <div class="col">
+                  <div class="card h-100">
+                        
+                    
+                    <img class="shop-image-card" src="./image/peanut.jpg" alt="">
+                      <div class="card-body">
+                          <h6>Peanuts(Mong phali)</h6>
+                          <h6 class="card-title"><s><span >Rs.800</span></s></h6><h5 class="d-flex justify-content-center">Rs.600</h5>
+                          <p>
+                              Peanuts provide protein, healthy fats, vitamins; promote heart health and satiety.</p>
+                              <div class="quantity">
+                                <button class="btn_1" onclick="decreaseQuantity(event)">-</button>
+                                <input type="text" value="1" min="1">
+                                <button class="btn_1" onclick="increaseQuantity(event)">+</button>
+                            </div>
+                         
+                            <div class="but" >
+                         
+                              <button class="btn" onclick="addToCart()">Add to Cart</button>
+                             </div>
+                              
+                      </div>
+                    </div>    
+                </div>
+          </div>
+          
+          
+          
+      <div class="col-md-3">
+              <div class="col">
+                  <div class="card h-100">
+                        
+                    
+                    <img class="shop-image-card" src="./image/hazel nut.jpg" alt="" >
+                      <div class="card-body">
+                          <h6>Hazelnut(Fandaq)</h6>
+                          <h6 class="card-title"><s><span>Rs.3000</span></s></h6><h5 class="d-flex justify-content-center">Rs.2800</h5>
+                          <p>It Contains fiber, promoting digestive health and aiding in weight management</p>
+                          <div class="quantity">
+                            <button class="btn_1" onclick="decreaseQuantity(event)">-</button>
+                            <input type="text" value="1" min="1">
+                            <button class="btn_1" onclick="increaseQuantity(event)">+</button>
+                        </div>
+                        <div class="but" >
+                         
+                          <button class="btn" onclick="addToCart()">Add to Cart</button>
+                         </div>
+                          
+                      </div>
+                    </div>    
+                </div>
+          </div><div class="col-md-3">
+              <div class="col">
+                  <div class="card h-100">
+                        
+                    
+                    <img class="shop-image-card" src="https://media.post.rvohealth.io/wp-content/uploads/2020/11/saffron-732x549-thumbnail.jpg" alt="" >
+                      <div class="card-body">
+                          <h6> Saffron(Zafran)</h6>
+                          <h6 class="card-title"><s><span >Rs.800</span></s></h6><h5 class="d-flex justify-content-center">Rs.750(1gram)</h5>
+                          <p>
+                              Saffron: antioxidant-rich, mood enhancer, potential benefits for vision, heart health.</p>
+                              <div class="quantity">
+                                <button class="btn_1" onclick="decreaseQuantity(event)">-</button>
+                                <input type="text" value="1" min="1">
+                                <button class="btn_1" onclick="increaseQuantity(event)">+</button>
+                            </div>
+                         
+                            <div class="but" >
+                         
+                              <button class="btn" onclick="addToCart()">Add to Cart</button>
+                             </div>
+                              
+                      </div>
+                    </div>    
+                </div>
+          </div><div class="col-md-3">
+              <div class="col">
+                  <div class="card h-100">
+                        
+                    
+                    <img class="shop-image-card" src="./image/honeyy.jpg" alt="" >
+                      <div class="card-body">
+                          <h6>Honey(Shehed)</h6>
+                          <h6 class="card-title"><s><span >Rs.3590</span></s></h6><h5 class="d-flex justify-content-center">Rs.3490</h5>
+                          <p>
+                              Honey: antioxidants, anti-microbial, soothes, promotes health, aids wound healing.</p>
+
+                              <div class="quantity">
+                                <button class="btn_1" onclick="decreaseQuantity(event)">-</button>
+                                <input type="text" value="1" min="1">
+                                <button class="btn_1" onclick="increaseQuantity(event)">+</button>
+                            </div>
+                         
+                            <div class="but" >
+                         
+                              <button class="btn" onclick="addToCart()">Add to Cart</button>
+                             </div>
+                              
+                      </div>
+                    </div>    
+                </div>
+          </div></div>
+        
+    </div>
+    <div class="container">
+      <div class="row" style="margin-top: 50px;">
+            
+            
+        <div class="col-md-3">
+            <div class="col">
+                <div class="card h-100">
+                      
+                  
+                  <img class="shop-image-card" src="https://i.pinimg.com/564x/70/d1/75/70d175bf928cb38a53d10eea969662b7.jpg" alt=""  >
+                    <div class="card-body">
+                        <h6>Pumpkin seeds(Tukham patha)</h6>
+                        <h6 class="card-title"><s><span >Rs.1500</span></s></h6><h5 class="d-flex justify-content-center">Rs.1300</h5>
+                        <p>
+                            Pumpkin seeds provides protein, fats, nutrients; support heart health and immunity.
+                            
+                            
+                            
+                            
+                            </p>
+                            <div class="quantity">
+                              <button class="btn_1" onclick="decreaseQuantity(event)">-</button>
+                              <input type="text" value="1" min="1">
+                              <button class="btn_1" onclick="increaseQuantity(event)">+</button>
+                          </div>
+                       
+                          <div class="but" >
+                         
+                            <button class="btn" onclick="addToCart()">Add to Cart</button>
+                           </div>
+                            
+                    </div>
+                  </div>    
+              </div>
+        </div>
+        
+        
+        
+    <div class="col-md-3">
+            <div class="col">
+                <div class="card h-100">
+                      
+                  
+                  <img class="shop-image-card" src="https://healthymaster.in/cdn/shop/articles/Untitled_design_-_2023-07-02T120347.301.png?v=1688279672" alt="" >
+                    <div class="card-body">
+                        <h6>Cashew(Kaju)</h6>
+                        <h6 class="card-title"><s><span >Rs.4000</span></s></h6><h5 class="d-flex justify-content-center">Rs.3800</h5>
+                        <p>
+                            Cashews: protein, healthy fats, vitamins; promote heart health and satiety.</p>
+                            <div class="quantity">
+                              <button class="btn_1" onclick="decreaseQuantity(event)">-</button>
+                              <input type="text" value="1" min="1">
+                              <button class="btn_1" onclick="increaseQuantity(event)">+</button>
+                          </div>
+                       
+                          <div class="but" >
+                         
+                            <button class="btn" onclick="addToCart()">Add to Cart</button>
+                           </div>
+                            
+                    </div>
+                  </div>    
+              </div>
+        </div><div class="col-md-3">
+            <div class="col">
+                <div class="card h-100">
+                      
+                  
+                  <img class="shop-image-card" src="https://leyjao.pk/images/thumbnails/270/270/detailed/605/TNATUAJWADK09.jpeg" alt="" >
+                    <div class="card-body">
+                        <h6>Dates(Khajoor)</h6>
+                        <h6 class="card-title"><s>Rs.2600</span></s></h6><h5 class="d-flex justify-content-center">Rs.2400</h5>
+                        <p>
+                            Dates: fiber, antioxidants, minerals; support digestion, provide natural energy boost.</p>
+                            <div class="quantity">
+                              <button class="btn_1" onclick="decreaseQuantity(event)">-</button>
+                              <input type="text" value="1" min="1">
+                              <button class="btn_1" onclick="increaseQuantity(event)">+</button>
+                          </div>
+                       
+                          <div class="but" >
+                         
+                            <button class="btn" onclick="addToCart()">Add to Cart</button>
+                           </div>
+                            
+                    </div>
+                  </div>    
+              </div>
+        </div><div class="col-md-3">
+            <div class="col">
+                <div class="card h-100">
+                      
+                  
+                  <img class="shop-image-card" src="https://post.healthline.com/wp-content/uploads/2021/05/makhana-1296x728-header.jpg" alt="">
+                    <div class="card-body">
+                        <h6>Foxnuts(Phool Makhana)</h6>
+                        <h6 class="card-title"><s><span >Rs.2500</span></s></h6><h5 class="d-flex justify-content-center">Rs.2300</h5>
+                        <p>
+                            Foxnuts: low-cal, high-protein, fiber-rich; promote satiety, aid weight management.</p>
+                            <div class="quantity">
+                              <button class="btn_1" onclick="decreaseQuantity(event)">-</button>
+                              <input type="text" value="1" min="1">
+                              <button class="btn_1" onclick="increaseQuantity(event)">+</button>
+                          </div>
+                       
+                          <div class="but" >
+                         
+                            <button class="btn" onclick="addToCart()">Add to Cart</button>
+                           </div>
+                            
+                    </div>
+                  </div>    
+              </div>
+        </div></div>
+    </div>
+
+    
+      <script type="text/javascript">
+function search() {
+let filter = document.getElementById('find').value.toUpperCase();
+let item = document.querySelectorAll('.col');
+let l = document.getElementsByTagName('h6');
+for(var i = 0;i<=l.length;i++){
+let a=item[i].getElementsByTagName('h6')[0];
+let value=a.innerHTML || a.innerText || a.textContent;
+if(value.toUpperCase().indexOf(filter) > -1) {
+item[i].style.display="";
+}
+else
+{
+item[i].style.display="none";
+}
+}
+}
+    </script>
+
+
+    <div class="container-fluid p-0" style="margin-top: 50px;">
+
+        <footer class="text-white text-center text-lg-start">
+          <!-- Grid container -->
+          <div class="container-fluid p-4">
+            <!--Grid row-->
+            <div class="row mt-4">
+              <!--Grid column-->
+              <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                <h5 class="text-uppercase mb-4">About company</h5>
+      
+                <p>
+                  Welcome to Mani-Dry-Fruits store - your one-stop destination for high-quality products!
+                </p>
+      
+                <p>
+                  Welcome to Mani-Dry-Fruits, where health meets indulgence! We are your go-to destination for premium quality dry fruits that not only tantalize your taste buds but also contribute to your overall well-being. Our passion for providing the finest dry fruits drives us to source the best, ensuring that every bite is a delightful and nutritious experience.
+                </p>
+      
+                <div class="">
+                  <!-- Facebook -->
+                  <a type="button" class="btn btn-floating btn-warning btn-lg" ><i class="fab fa-facebook-f"></i></a>
+                  <!-- Dribbble -->
+                  <a type="button" class="btn btn-floating btn-warning btn-lg"><i class="fab fa-dribbble"></i></a>
+                  <!-- Twitter -->
+                  <a type="button" class="btn btn-floating btn-warning btn-lg"><i class="fab fa-twitter"></i></a>
+                  <!-- Google + -->
+                  <a type="button" class="btn btn-floating btn-warning btn-lg"><i class="fab fa-google-plus-g"></i></a>
+                  <!-- Linkedin -->
+                </div>
+              </div>
+              <!--Grid column-->
+      
+              <!--Grid column-->
+              <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+              
+                <ul class="fa-ul" style="margin-left: 1.65em;">
+                  <li class="mb-3">
+                    <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Plot 1E, 3, Habib Garden, 1 Underpass، near Nazimabad, Block 1 Nazimabad, Karachi, Karachi City, Sindh 74400</span>
+                  </li>
+                  <li class="mb-3">
+                    <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">awaismiskeen009@gmail.com</span>
+                  </li>
+                  <li class="mb-3">
+                    <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">+923148848399</span>
+                  </li>
+                  <li class="mb-3">
+                    <span class="fa-li"><i class="fas fa-print"></i></span><span class="ms-2">+923148848399</span>
+                  </li>
+                </ul>
+              </div>
+              <!--Grid column-->
+      
+              <!--Grid column-->
+              <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase mb-4">Opening hours</h5>
+      
+                <table class="table text-center text-white">
+                  <tbody class="font-weight-normal">
+                    <tr>
+                      <td>Mon - Thu:</td>
+                      <td>8am - 9pm</td>
+                    </tr>
+                    <tr>
+                      <td>Fri - Sat:</td>
+                      <td>8am - 1am</td>
+                    </tr>
+                    <tr>
+                      <td>Sunday:</td>
+                      <td>9am - 10pm</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+          </div>
+          <!-- Grid container -->
+      
+          <!-- Copyright -->
+          <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2024 Copyright:
+            <a class="text-white" href="http://127.0.0.1:5500/index.html">MDBootstrap.com</a>
+          </div>
+          <!-- Copyright -->
+        </footer>
+        
+      </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+</script>
+<script>
+  function addToCart() {
+    alert('Item has been added to your cart!');
+  }
+</script>
+
+
+<script>
+  function increaseQuantity(event) {
+    var button = event.target;
+
+    var quantityInput = button.parentNode.querySelector('input[type="text"]');
+    var currentValue = parseInt(quantityInput.value);
+    quantityInput.value = currentValue + 1;
+  }
+
+  function decreaseQuantity(event) {
+    var button = event.target;
+
+    var quantityInput = button.parentNode.querySelector('input[type="text"]');
+    var currentValue = parseInt(quantityInput.value);
+    if (currentValue > 1) {
+      quantityInput.value = currentValue -1;
+    }
+  }
+</script>
+
+
+</body>
+</html>
